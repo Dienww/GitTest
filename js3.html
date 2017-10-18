@@ -6,13 +6,13 @@
 </head>
 <body>
 <script type="application/javascript">
-    Array.prototype.Map = function(fn) {
+    Array.prototype.Filter = function(fn) {
         var newArr = [];
         for (var i=0;i<this.length;i++){
-            for(var j=0;j<this.length;j++){
-                var a = 2*this[i];
+            if(this[i]%3==0){
+                var a = this[i];
+                newArr.push(a);
             }
-            newArr.push(a);
         }
         return newArr;
     };
@@ -22,8 +22,8 @@
         return newArr;
     }
 
-    var myArr = [10,11,2,5];
-    console.log(myArr.Map(myarr()));
+    var myArr = [3,15,7,5,9,4];
+    console.log(myArr.Filter(myarr()));
 
 </script>
 </body>
