@@ -6,10 +6,10 @@
 </head>
 <body>
 <script type="application/javascript">
-    Array.prototype.Filter = function(fn) {
+    Array.prototype.Filter = function(fn,value) {
         var newArr = [];
         for (var i=0;i<this.length;i++){
-            if(this[i]%3==0){
+            if(this[i]%value==0){
                 var a = this[i];
                 newArr.push(a);
             }
@@ -23,7 +23,7 @@
     }
 
     var myArr = [3,15,7,5,9,4];
-    console.log(myArr.Filter(myarr()));
+    console.log(myArr.Filter(myarr(),3));
 
 </script>
 </body>

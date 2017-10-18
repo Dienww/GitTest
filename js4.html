@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    var ages = [32, 33, 16, 40];
+    function checkAdult(age) {
+        return age >= 18;
+    }
+    console.log(ages.filter(checkAdult));
+    Array.prototype.jsFilter = function (condition) {
+        if(typeof this == "object"){
+            var result = [];
+            //遍历数组
+            for (var i=0;i<this.length;i++){
+                if (condition(this[i])){
+                    result.push(this[i]);
+                }
+            }
+            return result;
+        }else {
+            return "参数1为非数组类型";
+        }
+    };
+    console.log(ages.jsFilter(checkAdult));
+</script>
+</body>
+</html>
