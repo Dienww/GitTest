@@ -6,7 +6,7 @@
 </head>
 <body>
 <script type="application/javascript">
-    Array.prototype.Filter = function(fn,value) {
+    Array.prototype.Filter = function(fn,arr,value) {
         var newArr = [];
         for (var i=0;i<this.length;i++){
             if(this[i]%value==0){
